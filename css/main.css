@@ -1,0 +1,1018 @@
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Hana_handwriting';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_05@1.0/Hana_handwriting.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: #111; display: block; font-family: 'NanumBarunGothic';}
+li{list-style: none;}
+header,section,footer{width: 100%;}
+img{width: 100%;}
+html, body{
+    font-family: 'NanumBarunGothic';
+    overflow-x: hidden;
+}
+
+.wrap{
+    width: 100%;
+    position: relative;
+}
+.wrap .hand img{
+    width: 20%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -10;
+}
+.wrap .hand img:nth-child(1){
+    left: 0;
+}
+.wrap .hand img:nth-child(2){
+    right: 0
+}
+
+.visual{
+    height: 100vh;
+}
+#image{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bg.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: changeBg 1s step-end infinite;
+    border: none;
+}
+@keyframes changeBg{
+    0%,20%,100%{background-image: url(../img/bg.jpg);}
+    10%{background-image: url(../img/bg1.jpg);}
+}
+.section_box{
+    margin: 0 auto;
+    width: 1650px;
+    background-color: #818181;
+    background-image: url(../img/file_bg1.jpg);
+    padding-top: 150px;
+    border-radius: 50px;
+    padding-bottom: 80px;
+}
+.section_box_in{
+    width: 1500px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 3px 3px 5px #111;
+    z-index: 30;
+}
+.section_box_in::after{
+    content: "";
+    width: 600px;
+    height: 250px;
+    background-image: url(../img/clips1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.letter {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
+  .letter:before, .letter:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+  }
+  .letter:before {
+    background: #fafafa;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+  }
+  .letter:after {
+    background: #f6f6f6;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
+  }
+section{
+    position: relative;
+    z-index: 50;
+}
+/* 프로필 */
+section.profile .center_box{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+section.profile .title h1{
+    font-size: 48px;
+    text-align: center;
+}
+section.profile .detail{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+section.profile .aboutme{
+    margin-top: 50px;
+}
+section.profile .aboutme ul{
+    width: 1200px;
+    display: grid;
+    border: 4px solid #333; 
+    grid-template-columns: 200px 700px 300px;
+    grid-template-rows: 80px 80px 80px 80px 80px;
+    grid-template-areas: "me1 me2 me3"
+                         "me4 me5 me3"
+                         "me6 me7 me3"
+                         "me8 me9 me3"
+                         "me10 me11 me3";
+}
+.me1{grid-area: me1;}
+.me2{grid-area: me2 ;}
+.me3{grid-area: me3 ;}
+.me4{grid-area: me4 ;}
+.me5{grid-area: me5 ;}
+.me6{grid-area: me6 ;}
+.me7{grid-area: me7;}
+.me8{grid-area: me8;}
+.me9{grid-area: me9;}
+.me10{grid-area: me10;}
+.me11{grid-area: me11;}
+
+section.profile .aboutme ul li{
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 80px;
+}
+section.profile .aboutme ul li{
+    font-size: 20px;
+}
+section.profile .aboutme ul li.null{
+    font-size: 28px;
+    font-family: 'Hana_handwriting';
+}
+li.me1, li.me4, li.me6, li.me8, li.me10{
+    background-color: #ddd;
+}
+section.profile .aboutme ul li.me3{
+    background-image: url(../img/sitani.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+/* 학력 교육사항 */
+section.education{
+    margin-top: 100px;
+}
+section.education .center_box{
+    width: 1200px;
+    margin: 0 auto;
+}
+section.education h2{
+    font-size: 30px;
+}
+section.education .edu{
+    margin-top: 30px;
+}
+section.education .edu ul{
+    width: 1200px;
+    display: grid;
+    border: 4px solid #333; 
+    grid-template-columns: 360px 360px 360px 120px;
+    grid-template-rows: 80px 80px;
+    grid-template-areas: "ed1 ed2 ed3 ed4"
+                         "ed5 ed6 ed7 ed8"
+                         "ed9 ed10 ed11 ed12";
+}
+.ed1{grid-area: ed1;}
+.ed2{grid-area: ed2 ;}
+.ed3{grid-area: ed3 ;}
+.ed4{grid-area: ed4 ;}
+.ed5{grid-area: ed5 ;}
+.ed6{grid-area: ed6 ;}
+.ed7{grid-area: ed7;}
+.ed8{grid-area: ed8;}
+.ed9{grid-area: ed9;}
+.ed10{grid-area: ed10;}
+.ed11{grid-area: ed11;}
+
+section.education .edu ul li{
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 80px;
+}
+section.education .edu ul li{
+    font-size: 20px;
+}
+section.education .edu ul li.null{
+    font-size: 28px;
+    font-family: 'Hana_handwriting';
+}
+li.ed1, li.ed2, li.ed3, li.ed4{
+    background-color: #ddd;
+}
+
+/* 스킬 */
+section.skills{
+    margin-top: 100px;
+}
+section.skills .center_box{
+    width: 1200px;
+    margin: 0 auto;
+}
+section.skills h2{
+    font-size: 30px;
+}
+section.skills .stats{
+    margin-top: 30px;
+}
+section.skills .stats ul{
+    width: 1200px;
+    display: grid;
+    border: 4px solid #333; 
+    grid-template-columns: 200px 900px 100px;
+    grid-template-rows: 80px 100px 100px 100px 100px 100px 100px;
+    grid-template-areas: "sk1 sk2 sk3"
+                         "sk4 sk5 sk6"
+                         "sk7 sk8 sk9"
+                         "sk10 sk11 sk12"
+                         "sk13 sk14 sk15"
+                         "sk16 sk17 sk18"
+                         "sk19 sk20 sk21";
+}
+.sk1{grid-area: sk1;}
+.sk2{grid-area: sk2 ;}
+.sk3{grid-area: sk3 ;}
+.sk4{grid-area: sk4 ;}
+.sk5{grid-area: sk5 ;}
+.sk6{grid-area: sk6 ;}
+.sk7{grid-area: sk7;}
+.sk8{grid-area: sk8;}
+.sk9{grid-area: sk9;}
+.sk10{grid-area: sk10;}
+.sk11{grid-area: sk11;}
+.sk12{grid-area: sk12;}
+.sk13{grid-area: sk13;}
+.sk14{grid-area: sk14;}
+.sk15{grid-area: sk15;}
+.sk16{grid-area: sk16;}
+.sk17{grid-area: sk17;}
+.sk18{grid-area: sk18;}
+.sk19{grid-area: sk19;}
+.sk20{grid-area: sk20;}
+.sk21{grid-area: sk21;}
+
+
+section.skills .stats ul li{
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 80px;
+}
+section.skills .stats ul li{
+    font-size: 20px;
+}
+section.skills .stats ul li.null{
+    font-size: 26px;
+    font-family: 'Hana_handwriting';
+}
+section.skills .stats ul li span{
+    font-size: 22px;
+    font-family: 'Hana_handwriting';
+}
+li.sk1, li.sk2, li.sk3{
+    background-color: #ddd;
+}
+
+/* 자격증 */
+section.license{
+    margin-top: 100px;
+}
+section.license .center_box{
+    width: 1200px;
+    margin: 0 auto;
+}
+section.license h2{
+    font-size: 30px;
+}
+section.license .lics{
+    margin-top: 30px;
+}
+section.license .lics ul{
+    width: 1200px;
+    display: grid;
+    border: 4px solid #333; 
+    grid-template-columns: 800px 400px;
+    grid-template-rows: 80px 80px;
+    grid-template-areas: "lics1 lics2"
+                         "lics3 lics4"
+                         "lics5 lics6";
+}
+.lics1{grid-area: lics1;}
+.lics2{grid-area: lics2 ;}
+.lics3{grid-area: lics3 ;}
+.lics4{grid-area: lics4 ;}
+.lics5{grid-area: lics5 ;}
+.lics6{grid-area: lics6 ;}
+
+section.license .lics ul li{
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 80px;
+}
+section.license .lics ul li{
+    font-size: 20px;
+}
+section.license .lics ul li.null{
+    font-size: 28px;
+    font-family: 'Hana_handwriting';
+}
+li.lics1, li.lics2{
+    background-color: #ddd;
+}
+
+/* 버튼 나중에 삭제 */
+button{
+    align-self: center;
+    background: transparent;
+    padding: 1rem 1rem;
+    margin: 0 1rem;
+    transition: all 0.5s ease;
+    color: #41403E;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    cursor: pointer;
+}
+section button:hover{
+    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+}
+section button.lined.thin{
+    border: solid 2px #41403E;
+}
+
+
+/* 포트폴리오 */
+section.web{
+    margin-top: 100px;
+}
+section.web .center_box{
+    width: 1200px;
+    margin: 0 auto;
+}
+section.web h2{
+    font-size: 30px;
+}
+section.web .portfolio{
+    margin-top: 30px;
+}
+section.web .portfolio ul{
+    width: 1200px;
+    display: grid;
+    border: 4px solid #333; 
+    grid-template-columns: 1200px;
+    grid-template-rows: 80px 420px;
+    grid-template-areas: "porfol1"
+                         "porfol2"
+                    
+}
+.porfol1{grid-area: porfol1;}
+.porfol2{grid-area: porfol2;}
+
+section.web .portfolio ul li{
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 80px;
+}
+section.web .portfolio ul li{
+    font-size: 20px;
+}
+section.web .portfolio ul li.null{
+    font-size: 28px;
+    font-family: 'Hana_handwriting';
+}
+li.porfol1{
+    background-color: #ddd;
+}
+
+/* 포폴 슬라이더 */
+section.web .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+section.web .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.web .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.web .swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+section.web .swiper-button-next,
+section.web .swiper-button-prev{
+    width: 60px;
+    height: 50px;
+    border:solid 3px #41403E;
+    box-shadow: 10px 28px 24px -16px rgba(0, 0, 0, 0.4);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    transition: all 0.5s ease;
+    background-color: #fff;
+}
+section.web .swiper-button-next:hover,
+section.web .swiper-button-prev:hover{
+    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.5);
+    border:solid 3px #0057ab;
+    background-color: #abd6ff;
+}
+section.web .swiper-button-next:hover:after,
+section.web .swiper-button-prev:hover:after{
+    color: #0057ab;
+}
+section.web .swiper-button-next:after,
+section.web .swiper-button-prev:after{
+    color:#41403E;
+}
+
+.swiper-pagination-bullet-active{
+    background-color:#41403E;
+}
+
+section.web .site{
+    width: 600px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+}
+section.web .w1{
+    background-image: url(../img/portfolio1.jpg);
+}
+section.web .w2{
+    background-image: url(../img/portfolio2.jpg);
+}
+section.web .w3{
+    background-image: url(../img/portfolio3.jpg);
+}
+section.web .detail{
+    width: 600px;
+}
+section.web .detail h2{
+    font-size: 40px;
+}
+section.web .detail p{
+    font-size: 28px;
+    line-height: 26px;
+}
+
+/* 디테일 버튼 */
+section.web .detail button{
+    align-self: center;
+    background: transparent;
+    padding: 1rem 1rem;
+    margin: 50px 0 0;
+    transition: all 0.5s ease;
+    color: #41403E;
+    font-size: 20px;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    cursor: pointer;
+    font-family: 'Hana_handwriting';
+}
+section.web .detail button a{
+    font-family: 'Hana_handwriting';
+}
+section.web .detail button:hover{
+    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+}
+section.web .detail button.lined.thin{
+    border: solid 2px #41403E;
+}
+
+section.web .s1 .detail button a{
+    color: #7f2722;
+}
+section.web .s1 .detail button.lined.thin{
+    border: solid 2px #e6a5a1;
+}
+section.web .s1 .detail button.lined.thin:hover{
+    background-color: #e6a5a1;
+    border: solid 2px #7f2722;
+}
+
+section.web .s2 .detail button a{
+    color: #7f2722;
+}
+section.web .s2 .detail button.lined.thin{
+    border: solid 2px #e6a5a1;
+}
+section.web .s2 .detail button.lined.thin:hover{
+    background-color: #e6a5a1;
+    border: solid 2px #7f2722;
+}
+
+section.web .s2 .detail button.m a{
+    color: #6c844d;
+}
+section.web .s2 .detail button.lined.thin.m{
+    border: solid 2px #b7c9a1;
+}
+section.web .s2 .detail button.lined.thin.m:hover{
+    background-color: #b7c9a1;
+    border: solid 2px #6c844d;
+}
+
+/* 그래픽 디자인 */
+section.graphic{
+    margin-top: 100px;
+}
+section.graphic .center_box{
+    width: 1200px;
+    margin: 0 auto;
+}
+section.graphic h2{
+    font-size: 30px;
+}
+section.graphic .design{
+    margin-top: 30px;
+}
+section.graphic .design ul{
+    width: 1200px;
+    display: grid;
+    border: 4px solid #333; 
+    grid-template-columns: 1200px;
+    grid-template-rows: 80px 520px;
+    grid-template-areas: "grp1"
+                         "grp2"
+                    
+}
+.grp1{grid-area: grp1;}
+.grp2{grid-area: grp2;}
+
+section.graphic .design ul li{
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 80px;
+}
+section.graphic .design ul li{
+    font-size: 20px;
+}
+section.graphic .design ul li.null{
+    font-size: 28px;
+    font-family: 'Hana_handwriting';
+}
+li.grp1{
+    background-color: #ddd;
+}
+/* 그래픽 디자인 목록 */
+.main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.section {
+    position: absolute;
+    z-index: 0;
+    width: 24%;
+    height: 48%;
+    overflow: hidden;
+    cursor: pointer;
+    transform: scale(1);
+    will-change: transform, contents;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    border:solid 3px #41403E;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .section:hover{
+    background-color: #111;
+  }
+  .section img{
+    
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  .section:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  .section:nth-child(2) {
+    top: 0;
+    left: 25%;
+    background-image: url(../img/g2.jpg);
+    background-size: 150%;
+  }
+  .section:nth-child(3) {
+    top: 0;
+    left: 50%;
+    background-image: url(../img/g3.jpg);
+  }
+  .section:nth-child(4) {
+    top: 0;
+    left: 75%;
+    background-image: url(../img/g4.png);
+  }
+  .section:nth-child(5) {
+    top: 50%;
+    left: 0%;
+    background: #7fa09d;
+    background-image: url(../img/g5.jpg);
+    background-size: cover;
+  }
+  .section:nth-child(6) {
+    top: 50%;
+    left: 25%;
+    background-image: url(../img/g6.jpg);
+  }
+  .section:nth-child(7) {
+    top: 50%;
+    left: 50%;
+    background-image: url(../img/g7.jpg);
+  }
+  .section:nth-child(8) {
+    top: 50%;
+    left: 75%;
+    background-image: url(../img/g8.jpg);
+  }
+  .section.is-expanded {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    cursor: initial;
+    background-size: 50%;
+    overflow-y: scroll;
+  }
+  .section.is-expanded img{
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s;
+  }
+  .has-expanded-item .section:not(.is-expanded) {
+    transform: scale(0);
+  }
+  
+  .close-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    transition: opacity 150ms linear;
+    will-change: opacity;
+  }
+  .section.is-expanded .close-section {
+    opacity: 1;
+    transition-delay: 500ms;
+    pointer-events: initial;
+  }
+  .demo-box {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+/* 연락망 */
+section.contact{
+    margin-top: 100px;
+}
+section.contact .center_box{
+    width: 1200px;
+    margin: 0 auto;
+}
+section.contact h2{
+    font-size: 30px;
+}
+section.contact .message{
+    margin-top: 30px;
+}
+section.contact .message ul{
+    width: 1200px;
+    display: grid;
+    border: 4px solid #333; 
+    grid-template-columns: 1200px;
+    grid-template-rows: 80px 320px;
+    grid-template-areas: "msg1"
+                         "msg2"
+                    
+}
+.msg1{grid-area: msg1;}
+.msg2{grid-area: msg2;}
+
+section.contact .message ul li{
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 80px;
+}
+section.contact .message ul li{
+    font-size: 20px;
+}
+section.contact .message ul li.null{
+    font-size: 28px;
+    font-family: 'Hana_handwriting';
+}
+li.msg1{
+    background-color: #ddd;
+}
+
+
+/* 메시지 애니메이션 */
+li.msg2{
+    background-color: #abd6ff;
+    position: relative;
+}
+.frame {
+    width: 500px;
+    height: auto;
+    margin: 15% auto 0;
+    position: absolute;
+    width: 100%;
+}
+  
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/**
+* Paper Plane
+*/
+/*Paper Plane: Container*/
+.plane-container {
+    width: 200px;
+    margin: 0px auto;
+    z-index: 3;
+}
+   /*Paper Plane: Image*/
+.plane {
+    width: 100%;
+    height: 60px;
+}
+
+/*Paper Plane: Animation*/
+.plane-container {
+    animation: paper-plane-scoping 2s alternate infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes paper-plane-scoping {
+    0% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+}
+
+.plane {
+    animation-timing-function: ease-in-out;
+    animation: paper-plane-soaring 4s forwards infinite;
+}
+@keyframes paper-plane-soaring {
+    0% {
+      transform: rotate(0deg);
+    }
+    40% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    60% {
+      transform: rotate(-10deg);
+    }
+    70% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+
+/**
+* Clouds
+*/
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.cloud {
+    position: absolute;
+    top: 10%;
+    width: 200px;
+    right: 0;
+    opacity: 1;
+}
+
+.cloud.front {
+    z-index: 9;
+}
+
+.cloud.distant {
+    z-index: 1;
+}
+
+.cloud.background {
+    z-index: 1;
+}
+
+/*Cloud Sizing*/
+.cloud.smaller {
+    margin-right: 400px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.cloud.small {
+    margin-right: 200px;
+    width: 150px;
+}
+
+.cloud.big {
+    width: 500px;
+    margin-top: 20px;
+    margin-right: 150px;
+}
+
+.cloud.massive {
+    width: 600px;
+    margin-top: 20px;
+    margin-right: 0px;
+}
+  
+  
+/*Cloud: Animation*/
+.cloud {  
+    animation-name: cloud-movement;
+    animation-timing-function: linear;
+    animation-direction: forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+
+.slow {
+    animation-duration: 9.2s;
+}
+
+.slower {
+    animation-duration: 11.2s;
+}
+  
+.slowest {
+    animation-duration: 13.5s;
+}
+  
+.super-slow {
+    animation-duration: 20.5s;
+}
+  
+@keyframes cloud-movement {
+    0% {
+      opacity: 0.1;
+      transform: translateX(300px);
+    }
+    10% {
+  
+      opacity: 0.7;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-1000px);
+    }
+}
+
+/* 이메일 버튼 */
+section.contact .message .msg2 button{
+    align-self: center;
+    background: transparent;
+    padding: 1rem 1rem;
+    transition: all 0.5s ease;
+    color: #41403E;
+    font-size: 40px;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.3);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    cursor: pointer;
+    font-family: 'Hana_handwriting';
+    position: absolute;
+    z-index: 100;
+    top: 20%;
+    right: 10%;
+    transform: translate(-50%, 50%);
+    background-color: #fff;
+}
+section.contact .message button.lined.thin{
+    border: solid 2px #41403E;
+}
+section.contact .message button:hover{
+    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.4);
+}
+
+
+/* 푸터 */
+.footer{
+    margin-top: 50px;
+}
+.footer .center_box{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .copy{
+    width: 800px;
+    flex: 1;
+}
+
+/* 도장 */
+.footer img{
+    width: 400px;
+    animation-name: stampani;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+@keyframes stampani{
+    0%{transform:scale(1); opacity: 0;}
+    97%{transform:scale(3); opacity: 0;}
+    100%{transform:scale(1); opacity: 1;}
+}
